@@ -1,0 +1,74 @@
+// .model{
+
+// }
+
+// .modalContent {
+//     width: 600px;
+//     background: #fff;
+//     padding: 24px;
+//     border-radius: 8px;
+//   }
+  
+//   .modalHeader {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     font-size: 10px;
+//     border-bottom: 1px solid black;
+//     margin: 30px 0px;
+//   }
+  
+//   .formField {
+//     margin-bottom: 16px;
+//   }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: start;
+    gap: 12px;
+    button{
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+  }
+  
+
+.addModal{
+   .modalTitle{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 18px;
+   }
+   .modalForm{
+    .contentHeading{
+        .mainHeading{
+            font-size: 14px;
+            font-weight: 600;
+            padding-left: 16px;
+        }
+        svg{
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+    }
+    .inputLabel{
+        font-size: 11px;
+        font-weight: 600;
+    }
+    .formField{
+        input {
+            border-radius: 8px;
+            background: #F2F4F8;
+            &:focus {
+               
+              }
+        }
+        
+        fieldset{
+            border-radius: 8px;
+        }
+    }
+   }
+}
