@@ -1,0 +1,24 @@
+@import "./../../styles/index.scss";
+
+.searchAndFilter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .search {
+        flex-grow: 1;
+        margin-right: 16px;
+        max-width: 250px;
+        fieldSet{
+            border-radius: 8px !important;
+        }
+    }
+    .filter {
+        width: 200px;
+        border-radius: 8px;
+    }
+    .dropdown{
+        fieldSet{
+            border-radius: 8px !important;
+        }
+    }
+}
