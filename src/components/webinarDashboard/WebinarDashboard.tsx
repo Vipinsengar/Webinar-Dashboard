@@ -5,6 +5,7 @@ import SearchAndFilter from '../searchBar/SearchBar';
 import WebinarCard from '../webinarCard/WebinarCard';
 import './index.scss';
 import WebinarModal from '../webinarModal/WebinarModal';
+import { Grid2 } from '@mui/material';
 
 const initialWebinars: WebinarData[] = [
     {
@@ -75,11 +76,16 @@ const WebinarDashboard: React.FC = () => {
         <div className="dashboard">
             <Header onAddWebinar={handleOpenModal} />
             <SearchAndFilter webinars={webinars} setFilteredWebinars={setFilteredWebinars} />
+            {filteredWebinars.length > 0 ? (
             <div className="webinarGrid">
-                {filteredWebinars.map((webinar, index) => (
+               { filteredWebinars.map((webinar, index) => (
                     <WebinarCard key={index} webinar={webinar} onEdit={() => handleEditWebinar(webinar)} onDelete={() => handleDeleteWebinar(webinar)} />
                 ))}
-            </div>
+                </div>
+            ):(
+                <Grid2 size={12} display={'flex'} alignContent={'center'} justifyContent={'center'}><p>No webinars found.</p></Grid2>
+              )}
+            
             <WebinarModal
                 open={modalOpen}
                 handleClose={handleCloseModal}

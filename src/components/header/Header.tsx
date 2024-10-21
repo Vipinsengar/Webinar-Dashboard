@@ -8,7 +8,7 @@ type HeaderProps = {
 const Header: React.FC<HeaderProps> = ({ onAddWebinar }) => {
   return (
     <div className="header">
-      <Typography className="title" variant="h5" sx={{ fontWeight: 600 }}>
+      <Typography className="title" variant="h5">
         Webinar
       </Typography>
       <Button className="addButton" variant="contained" onClick={onAddWebinar}>

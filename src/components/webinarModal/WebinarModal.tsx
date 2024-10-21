@@ -26,7 +26,6 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 const topicsList = ['Frontend Development', 'Backend Development', 'UI/UX Design', 'DevOps', 'Machine Learning'];
 
 const WebinarModal: React.FC<WebinarModalProps> = ({ open, handleClose, handleSave, defaultValues }) => {
-    console.log("modal called")
     const [formData, setFormData] = useState<WebinarData>({
         instructorName: '',
         instructorRole: '',
@@ -214,7 +213,6 @@ const WebinarModal: React.FC<WebinarModalProps> = ({ open, handleClose, handleSa
                             <Grid2 container size={12} spacing={1}>
                                 <Typography variant="h6" mr={2} className='inputLabel'>
                                     Instructor Image
-                                    <Typography variant="caption" color="error">*</Typography>
                                 </Typography>
                                 <Grid2 container size={12} spacing={1} className="imageUpload">
                                     <input
@@ -228,7 +226,7 @@ const WebinarModal: React.FC<WebinarModalProps> = ({ open, handleClose, handleSa
                                         <Avatar
                                             src={previewImage || undefined}
                                             alt="Instructor"
-                                            sx={{ width: 100, height: 100, cursor: 'pointer', borderRadius: 3 }}
+                                            sx={{ width: 95, height: 95, cursor: 'pointer', borderRadius: 3 }}
                                         />
                                     </label>
                                 </Grid2>
@@ -248,6 +246,7 @@ const WebinarModal: React.FC<WebinarModalProps> = ({ open, handleClose, handleSa
                                         onChange={handleDropdownChange}
                                         defaultValue="Select a topic"
                                         style={{ background: '#F2F4F8' }}
+                                        className="customSelect"
                                         fullWidth
                                     >
                                         <MenuItem value="Select a topic" disabled>
@@ -272,7 +271,7 @@ const WebinarModal: React.FC<WebinarModalProps> = ({ open, handleClose, handleSa
                             <VideocamOutlinedIcon />
                             <Typography className='mainHeading'>Webinar Details</Typography>
                         </Grid2>
-                        <Grid2 size={{ xs: 12, sm: 6, lg: 6 }}>
+                        <Grid2 size={{ xs: 12, sm: 6, lg: 12 }}>
                             <Typography variant="h6" mr={2} className='inputLabel'>
                                 Webinar Title
                                 <Typography variant="caption" color="error">*</Typography>
