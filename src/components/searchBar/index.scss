@@ -7,9 +7,13 @@
     .search {
         flex-grow: 1;
         margin-right: 16px;
-        max-width: 250px;
+        max-width: 364px;
         fieldSet{
             border-radius: 8px !important;
+            font-size: 14px;
+        }
+        input{
+            font-size: 14px;
         }
     }
     .filter {
@@ -17,6 +21,15 @@
         border-radius: 8px;
     }
     .dropdown{
+        .customSelect {
+                height: 36px;
+                font-size: 14px;
+                color: #0E1013;
+                text-align: justify;
+                 .MuiSelect-select {
+                    padding: 10px;
+                }
+            }
         fieldSet{
             border-radius: 8px !important;
         }

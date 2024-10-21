@@ -1,6 +1,7 @@
 import { Card, CardContent, Typography, Box, Button, Avatar } from '@mui/material';
 import './index.scss';
 import { WebinarData } from '../../types';
+import { format } from 'date-fns';
 
 type WebinarCardProps = {
     webinar: WebinarData;
@@ -19,9 +20,9 @@ const WebinarCard: React.FC<WebinarCardProps> = ({ webinar, onEdit , onDelete}) 
                     </Box>
                     <Avatar  className="avatar" src={webinar.image || undefined}/>
                 </Box>
-                <Typography display="flex" variant="body2" style={{ color: webinar.color}}><strong>{webinar.webinarTitle}</strong></Typography>
+                <Typography display="flex" className='webinarTitle' variant="body2" style={{ color: webinar.color}}>{webinar.webinarTitle}</Typography>
                 <Typography display="flex" className="titleCourse" variant="body1">{webinar.topics}</Typography>
-                <Typography display="flex" className="date" mb={3}>{webinar.startDate} • {webinar.startTime} to {webinar.endTime}</Typography>
+                <Typography display="flex" className="date" mb={3}>{format(new Date(webinar.startDate), 'EEEE • MMMM d, yyyy')} , {webinar.startTime} to {webinar.endTime}</Typography>
                 <Box className="buttons">
                     <Button className='deleteButton' variant="outlined" color="error" onClick={onDelete}>Delete</Button>
                     <Button className='editButton' variant="text" color="inherit" onClick={onEdit}>Edit</Button>

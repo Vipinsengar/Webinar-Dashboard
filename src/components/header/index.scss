@@ -4,13 +4,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
-
+    border-bottom: 1px solid #c9cdd2eb;
+    padding-bottom: 1.5rem;
     .addButton {
-        background-color: $primary-color;
+    background-color: #0E51F1;
         border-radius: 8px;
-        font-size: 13px;
+        font-size: 14px;
         text-transform: capitalize;
+        font-weight: 600;
+        height: 36px;
         &:hover {
             background-color: darken($primary-color, 10%);
         }
@@ -18,5 +20,6 @@
     .title{
         font-size: 18px;
         font-weight: 600;
+        color: #0E1013;
     }
 }

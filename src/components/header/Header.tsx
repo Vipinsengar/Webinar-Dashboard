@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material';
+import { Button, Grid2, Typography } from '@mui/material';
 import './index.scss';
 
 type HeaderProps = {
@@ -7,14 +7,18 @@ type HeaderProps = {
   
 const Header: React.FC<HeaderProps> = ({ onAddWebinar }) => {
   return (
-    <div className="header">
+    <Grid2 container size={12} className="header">
+      <Grid2 size={6} display={'flex'}pl={2}>
       <Typography className="title" variant="h5">
         Webinar
       </Typography>
+      </Grid2>
+      <Grid2 size={6} display={'flex'} justifyContent={'end'} pr={6}>
       <Button className="addButton" variant="contained" onClick={onAddWebinar}>
         Add webinar
       </Button>
-    </div>
+      </Grid2>
+    </Grid2>
   );
 };
 
